@@ -1,13 +1,19 @@
 body{
+
   margin: 0;
   padding:0;
   background-color: #262626;
 
 }
 
+li{
+  list-style: none;
+  letter-spacing: .1em;
+}
+
 a{
   font-size: 1.5em;
-  color: #ff6c00;
+  color: white;
   text-shadow: 0px 1px 0px #fff9e6;
 }
 
@@ -28,16 +34,41 @@ a:hover{
   margin: 5px 2px;
   padding: 10px 5px;
 
+
 }
 .body-ul li{
   list-style: none;
   color:#484848;
+
   font-family: ;
   font-size: 5em;
   letter-spacing:15px;
   animation: animate 1.4s linear infinite;
 
 }
+
+.body-ul li:nth-child(1){
+  animation-delay: .2s;
+}
+.body-ul li:nth-child(2){
+  animation-delay: .4s;
+}
+.body-ul li:nth-child(3){
+  animation-delay: .6s;
+}
+.body-ul li:nth-child(4){
+  animation-delay: .8s;
+}
+.body-ul li:nth-child(5){
+  animation-delay: 1s;
+}
+.body-ul li:nth-child(6){
+  animation-delay: 1.2s;
+}
+.body-ul li:nth-child(7){
+  animation-delay: 1.4s;
+}
+
 
 @keyframes animate
 {
@@ -56,7 +87,9 @@ a:hover{
     text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
   }
 }
-.rain{
+
+
+/*.rain{
   height: 100vh;
 
   background: url(poo1.png);
@@ -71,27 +104,36 @@ a:hover{
   height: 100%;
   background: #fff;
   /*animation: lighting 3.5s linear infinite;*/
-  opacity: 0;
+/*  opacity: 0;
 
 }
 
 
-/*@keyframes rain
+@keyframes rain
  {
    0
    {
      background-position: 0 0;
    }
-
-
-  50%
+   25%
+   {
+     background-position: 0% 15%;
+   }
+   50%
+   {
+     background-position: 0% 35%;
+   }
+   75%
+   {
+     background-position: 0% 50%;
+   }
+  100%
   {
-    background-position: 5% 35%;
+    background-position: 0% 75%;
   }
 
 }
 */
-
 
 /*
 @keyframes lighting
@@ -137,6 +179,7 @@ a:hover{
   width: 460px;
   height: 650px;
   background-image: url(cycleanimation.jpg);
+  margin: 0 auto;
 
   -webkit-animation: play 1.8s steps(6) infinite;
       -moz-animation: play 1.8s steps(6) infinite;
@@ -150,27 +193,27 @@ a:hover{
 
 @-webkit-keyframes play {
    from { background-position:    0px; }
-     to { background-position: -3367px; }
+     to { background-position: -600px; }
 }
 
 @-moz-keyframes play {
    from { background-position:    0px; }
-     to { background-position: -3367px; }
+     to { background-position: -600px; }
 }
 
 @-ms-keyframes play {
    from { background-position:    0px; }
-     to { background-position: -3364px; }
+     to { background-position: -600px; }
 }
 
 @-o-keyframes play {
    from { background-position:    0px; }
-     to { background-position: -3364px; }
+     to { background-position: -600px; }
 }
 
 @keyframes play {
    from { background-position:    0px; }
-     to { background-position: -3364px; }
+     to { background-position: -600px; }
 }
 
 
@@ -180,19 +223,41 @@ a:hover{
 
 
 
-
-
-
-
-h1
-{
-  color: #fff;
-  text-align: center;
-  font-size: 300%;
+.fly-in-text {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
+.fly-in-text li {
+    display: inline-block;
+    margin-right: 50px;
+    font-family: 'Spectral SC', serif;
+    font-size: 90px;
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    opacity: 1;
+    transition: all 2.5s ease;
+    letter-spacing: 1em;
+}
+.fly-in-text li:last-child {
+    margin-right: 0;
+}
+.fly-in-text.hidden li {
+    opacity: 0;
+}
+.fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
+.fly-in-text.hidden li:nth-child(2) { transform: translateX(20px) translateY(100px); }
+.fly-in-text.hidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
+.fly-in-text.hidden li:nth-child(4) { transform: translateX(10px) translateY(-200px); }
+
+
+
 
 
  p{
+   font-family: 'Poiret One', cursive;
    font-size: 1.5em;
    border: 2px;
    width: 360px;
@@ -200,5 +265,5 @@ h1
    margin:0 auto;
    color: #fff;
    position: relative;
-   margin-top: 110px;
+   margin-top: 80px;
 }
